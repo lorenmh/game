@@ -3,10 +3,13 @@ FLAGS=-c -std=c++11 -stdlib=libc++
 SDL_FLAGS=`sdl2-config --cflags --libs`
 
 all: main.o point.o body.o
-	$(CC) main.o point.o body.o -o bin
+	$(CC) main.o vec2.o point.o body.o -o bin
 
 main.o: main.cpp
 	$(CC) $(FLAGS) main.cpp
+
+vec2.o: vec2.cpp
+	$(CC) $(FLAGS) vec2.cpp
 
 point.o: point.cpp
 	$(CC) $(FLAGS) point.cpp

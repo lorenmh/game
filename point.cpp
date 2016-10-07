@@ -24,3 +24,12 @@ Point& Point::operator=(const Point& other) {
 double Point::distance(const Point& other) {
 	return std::hypot(other.x-x, other.y-y);
 }
+
+void Point::translate(double _x, double _y) {
+	x += _x;
+	y += _y;
+}
+void Point::translate(const Vec2& v) {
+	x += v.x;
+	y += v.y;
+}

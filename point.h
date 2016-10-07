@@ -12,11 +12,8 @@ class Point : public Vec2 {
 		Point& operator=(const Point& other);
 
 		double distance(const Point& other);
-		// copy constructor
-		//   Point(const Point& other);
-		//   // copy assignment
-		//   Point& operator=(const Point& other);
-		//   // destructor
-		//   ~Point();
+
+		void translate(double _x, double _y);
+		void translate(const Vec2& v);
 };
 #endif

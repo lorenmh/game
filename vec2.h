@@ -6,7 +6,23 @@ class Vec2 {
 		double x, y;
 		Vec2(double, double);
 		Vec2(const Vec2& other);
+
+		double magnitude();
+		Vec2 unit();
+
 		Vec2& operator=(const Vec2& other);
+
+		Vec2& operator+=(const Vec2& other);
+		Vec2& operator+=(double scalar);
+
+		Vec2 operator*(double scalar);
+		Vec2 operator/(double scalar);
+
+		Vec2 operator+(double scalar);
+		Vec2 operator+(const Vec2& other);
+
+		Vec2 operator-(double scalar);
+		Vec2 operator-(const Vec2& other);
 };
 
 #endif

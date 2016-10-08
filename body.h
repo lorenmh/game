@@ -12,7 +12,7 @@ class Body {
 		Body(const Vec2& p, const Vec2& v, double m, double r);
 		Body(double x, double y, double vx, double vy, double m, double r);
 
-		Vec2 gForce(const Body& other);
+		Vec2 gravity(const Body& other);
 };
 
 #endif

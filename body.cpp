@@ -18,9 +18,13 @@ Body::Body(double x, double y, double vx, double vy, double m, double r)
 	, radius(r)
 {}
 
-// F=ma; a=F/m; dv=(F/m)*dt
-//Vec2 Body::dv(const Vec2& force, double dt) {
-//}
+void Body::move(double time) {
+	position += velocity * time;
+}
+
+void Body::accelerate(const Vec2& force, double time) {
+	velocity += (Vec2)force / mass * time;
+}
 
 Vec2 Body::gravity(const Body& other) {
 	Vec2 displacement = (Vec2)other.position - position;

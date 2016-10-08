@@ -4,15 +4,15 @@
 #include "body.h"
 
 int main(int argc, char *argv[]) {
-	Body b1(-10.0,0.0,0.0,0.0,10.0,10.0);
-	Body b2(10.0,0.0,0.0,0.0,10.0,10.0);
-
-	Vec2 f1 = b1.gravity(b2);
-
-	std::cout << f1.x << ", " << f1.y << '\n';
-
-	b1.position += Vec2(19.0, 0);
-	Vec2 f2 = b1.gravity(b2);
-
-	std::cout << f2.x << ", " << f2.y << '\n';
+	Body b1(0.0,0.0,1.0,1.0,1.0,0.0);
+	std::cout << b1.position.x << ", " << b1.position.y << '\n';
+	b1.move(1.0);
+	std::cout << b1.position.x << ", " << b1.position.y << '\n';
+	b1.move(1.0);
+	std::cout << b1.position.x << ", " << b1.position.y << '\n';
+	b1.accelerate(Vec2(-1.0, 0.0), 1.0);
+	b1.move(1.0);
+	std::cout << b1.position.x << ", " << b1.position.y << '\n';
+	b1.move(1.0);
+	std::cout << b1.position.x << ", " << b1.position.y << '\n';
 }

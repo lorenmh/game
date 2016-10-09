@@ -1,6 +1,3 @@
-Vec2 = 2 dimensional vector
-Point = 2 dimensional position
+Client will be a C++ wrapper for SDL2.
 
-client will handle window creation, etc, will provide an abstraction to the underlaying os regarding windows, key/mouse/swipe events, etc.
-
-
+Client will have methods allowing for the creation and manipulation of windows, and will provide the API for drawing shapes to SDL surfaces.

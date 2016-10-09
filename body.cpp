@@ -23,7 +23,7 @@ void Body::move(double time) {
 }
 
 void Body::accelerate(const Vec2& force, double time) {
-	velocity += (Vec2)force / mass * time;
+	velocity += (Vec2)force * (time / mass);
 }
 
 Vec2 Body::gravity(const Body& other) {

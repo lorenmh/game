@@ -1,7 +1,10 @@
 #include <iostream>
+#include <chrono>
+#include <thread>
 
 #include "point.h"
 #include "body.h"
+#include "client.h"
 
 int main(int argc, char *argv[]) {
 	Body b1(0.0,0.0,1.0,1.0,1.0,0.0);
@@ -20,4 +23,8 @@ int main(int argc, char *argv[]) {
 	Vec2 g2 = b2.gravity(b1);
 	std::cout << "g1: " << g1.x << ", " << g1.y << '\n';
 	std::cout << "g2: " << g2.x << ", " << g2.y << '\n';
+
+	Environment env;
+	Window window;
+	env.delay(2000);
 }

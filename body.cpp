@@ -2,7 +2,7 @@
 
 #include "body.h"
 
-#define G 1
+#define G_CONSTANT 1
 
 Body::Body(const Vec2& p, const Vec2& v, double m, double r)
 	: position(p)
@@ -33,6 +33,6 @@ Vec2 Body::gravity(const Body& other) {
 	if (distance == 0.0) return Vec2(0.0,0.0);
 
 	Vec2 unit = displacement / distance;
-	double magnitude = (G*mass*other.mass)/(distance*distance);
+	double magnitude = (G_CONSTANT*mass*other.mass)/(distance*distance);
 	return unit * magnitude;
 }
